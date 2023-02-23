@@ -1,0 +1,12 @@
+<div class="container mt-5 mb-5">
+  <div class="row mb-5">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1 class="mb-5">Bookmark new</h1>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.association :movie, include_blank: "Select a movie" %>
+        <%= f.input :comment %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
